@@ -11,9 +11,11 @@ function modifyLocationMapLinks() {
     const nextSiblingDiv = locationSpan.nextElementSibling;
 
     // Select the second internal <div> of this sibling <div>
-    const targetDiv = nextSiblingDiv.querySelector("div:nth-child(2)");
+    const nameDiv = nextSiblingDiv.querySelector("div:nth-child(1)");
+    const addressDiv = nextSiblingDiv.querySelector("div:nth-child(2)");
 
-    const locationContent = targetDiv.textContent.trim();
+    const locationContent =
+      addressDiv.textContent.trim() || nameDiv.textContent.trim();
 
     // Add a click event listener directly to this <div>
     parentDiv.addEventListener("click", (event) => {
