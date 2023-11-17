@@ -16,7 +16,7 @@ if (locationSpan) {
 
   // Add a click event listener directly to this <div>
   targetDiv.addEventListener("click", (event) => {
-    event.preventDefault();
+    event.stopPropagation();
     window.open(
       `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
         locationContent
