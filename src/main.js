@@ -16,7 +16,7 @@ function modifyLocationMapLinks() {
     const locationContent = targetDiv.textContent.trim();
 
     // Add a click event listener directly to this <div>
-    targetDiv.addEventListener("click", (event) => {
+    parentDiv.addEventListener("click", (event) => {
       event.stopPropagation();
       window.open(
         `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
