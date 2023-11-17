@@ -1,19 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Make It Nicer",
+  "name": "ClickCraft",
   "version": "0.1",
-  "description": "Some stuff",
+  "description": "ClickCraft is your partner in crafting a smoother, more intuitive web experience.",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
       "matches": ["*://calendar.google.com/*"],
-      "js": ["dist/main.js"],
+      "js": ["src/main.js"],
       "run_at": "document_end"
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
